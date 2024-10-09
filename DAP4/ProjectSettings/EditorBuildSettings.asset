@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 7e6d3f4e5d896154ab4438845532ac3e
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: 5d6a3798c40345a419e9a8912e1ecab6
+  - enabled: 1
+    path: Assets/Scenes/Clinic.unity
+    guid: 14a57c5a1f4a84742a97be7c2db6cd2b
+  m_configObjects: {}
