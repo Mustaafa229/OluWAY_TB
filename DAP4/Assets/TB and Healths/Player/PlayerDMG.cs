@@ -16,6 +16,10 @@ public class PlayerDMG : MonoBehaviour
     public TB_Bar TBScript;
     float delayEffect = 1.0f;
 
+    [Header("For health and TB animation")]
+    public Animator ntwana;
+
+
     //[Header("For Attacking")] //attacking may just be handled in its own seperate script
 
     //[Tooltip("This one is temporary")] public GameObject weapon;
@@ -62,6 +66,12 @@ public class PlayerDMG : MonoBehaviour
             TakeTB_Damage();
             
         }
+        //test healing anim for health
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            ntwana.SetTrigger("HealsTB");
+            Debug.Log("Heal a nigga");
+        }
     }
     
     public void TakeDamage(int damage)
@@ -72,7 +82,9 @@ public class PlayerDMG : MonoBehaviour
     public void IncrementTB(int tbAmount)
     {
         currentTBAmount += tbAmount;
-        TBScript.SetTBAmount(currentTBAmount);   
+        TBScript.SetTBAmount(currentTBAmount);
+        ntwana.SetTrigger("Infecte");
+        
         
     }
     public void HealDamage(int healAmount, Collision collisionObj)
